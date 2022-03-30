@@ -5,7 +5,7 @@ function Palabras({text}){
     if (text!="")
         //longitud=text.trim().split(" ").length;
         longitud=text.split(" ").filter(
-          string => string!==""  
+          string => string!=="" && string!=="\n"  
         ).length;
     return(
         <>
