@@ -3,7 +3,10 @@ function Palabras({text}){
     let longitud= 0;
 
     if (text!="")
-        longitud=text.trim().split(" ").length;
+        //longitud=text.trim().split(" ").length;
+        longitud=text.split(" ").filter(
+          string => string!==""  
+        ).length;
     return(
         <>
             <p>
