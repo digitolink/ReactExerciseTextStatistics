@@ -1,12 +1,13 @@
 function Palabras({text}){
-
-    let longitud= 0;
-
-    if (text!="")
+    let longitud=0;
+    if (text!=""){
         //longitud=text.trim().split(" ").length;
-        longitud=text.split(" ").filter(
+        const palabrasArray=text.split(" ");
+        const palabrasConContenido=palabrasArray.filter(
           string => string!=="" && string!=="\n"  
-        ).length;
+        );
+        longitud=palabrasConContenido.length;
+    }
     return(
         <>
             <p>
